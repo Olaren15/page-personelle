@@ -1,0 +1,40 @@
+{
+  "name": "olaren-dev-homepage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The homepage to https://olaren.dev",
+  "author": {
+    "name": "Catherine Gilbert",
+    "email": "catherine.gilbert15@gmail.com",
+    "url": "https://olaren.dev"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "heroku-postbuild": "npm run build"
+  },
+  "main": "src/index.js",
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "register-service-worker": "^1.7.1",
+    "vue": "^3.2.19",
+    "vue-router": "^4.0.11",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-pwa": "^4.5.13",
+    "@vue/cli-plugin-router": "^4.5.13",
+    "@vue/cli-plugin-vuex": "^4.5.13",
+    "@vue/cli-service": "^4.5.13",
+    "@vue/compiler-sfc": "^3.2.19",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^10.2.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "license": "MIT",
+  "repository": "github:Olaren15/olaren-dev-homepage"
+}
