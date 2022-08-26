@@ -1,4 +1,8 @@
 <template>
-  <navbar></navbar>
-  <slot />
+  <div class="subpixel-antialiased">
+    <header>
+      <navbar/>
+    </header>
+    <slot/>
+  </div>
 </template>

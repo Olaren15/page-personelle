@@ -4,5 +4,19 @@ import {defineNuxtConfig} from 'nuxt'
 export default defineNuxtConfig({
     typescript: {
         typeCheck: true,
+    },
+    modules: [
+        '@nuxtjs/tailwindcss',
+        '@nuxtjs/color-mode'
+    ],
+    colorMode: {
+        preference: 'light',
+        dataValue: 'theme',
+        classSuffix: ''
+    },
+    router: {
+        options: {
+            linkActiveClass: 'active'
+        }
     }
 })
