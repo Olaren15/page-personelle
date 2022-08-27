@@ -1,6 +1,6 @@
 <template>
-  <nav class="p-4">
-    <div class="px-6 navbar bg-neutral-focus text-neutral-content rounded-full">
+  <nav>
+    <div class="px-6 navbar bg-neutral-focus text-neutral-content">
       <div class="navbar-start">
         <div class="dropdown">
           <label tabindex="0" class="btn btn-ghost md:hidden">
@@ -17,6 +17,9 @@
           <navigation-links/>
         </ul>
       </div>
+      <div class="navbar-center md:hidden">
+        <current-page-indicator/>
+      </div>
       <div class="navbar-end flex">
         <theme-switcher/>
       </div>
@@ -26,4 +29,6 @@
 
 <script setup lang="ts">
 import {Bars3Icon} from "@heroicons/vue/24/solid/index.js";
-</script>
+import NavigationLinks from "~/components/navigation-bar/navigation-links.vue";
+import ThemeSwitcher from "~/components/navigation-bar/theme-switcher.vue";
+import CurrentPageIndicator from "~/components/navigation-bar/current-page-indicator.vue";</script>
