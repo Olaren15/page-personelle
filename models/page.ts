@@ -1,4 +1,4 @@
 export interface Page {
-    route: string,
-    title: string,
+  route: string,
+  title: string,
 }

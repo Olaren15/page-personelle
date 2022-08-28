@@ -1,8 +1,8 @@
 <template>
   <div class="subpixel-antialiased">
     <header>
-      <navigation-bar/>
+      <navigation-bar />
     </header>
-    <slot/>
+    <slot />
   </div>
 </template>

@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import {usePages} from "~/composables/usePages";
+import { usePages } from "~/composables/usePages";
 
 const pages = usePages().getPages();
 
