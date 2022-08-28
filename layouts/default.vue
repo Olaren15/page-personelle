@@ -5,7 +5,10 @@
       <header>
         <navigation-bar />
       </header>
-      <slot />
+      <div
+        class="container mx-auto p-10 prose md:prose-lg lg:prose-lg 2xl:prose-xl md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-lg">
+        <slot />
+      </div>
     </div>
     <div class="drawer-side">
       <label for="page-drawer" class="drawer-overlay"></label>
