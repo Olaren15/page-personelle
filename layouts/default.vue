@@ -23,7 +23,10 @@ import { useHead, useRoute, useState } from "#imports";
 const route = useRoute();
 useHead(() => {
   return {
-    title: `${route.meta.title} - Olaren.dev`
+    title: `${route.meta.title} - Olaren.dev`,
+    htmlAttrs: {
+      lang: 'fr'
+    }
   };
 });
 

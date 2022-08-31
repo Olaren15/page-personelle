@@ -1,6 +1,6 @@
 <template>
   <NuxtLink :to="props.lienNavigation" target="_blank">
-    <div class="flex stats shadow bg-neutral text-neutral-content my-4 md:m-4 first:ml-0">
+    <div class="flex stats shadow bg-neutral text-neutral-content my-4 md:mr-4">
       <div class="stat">
         <div class="stat-title">
           <slot name="social-media-name" />
