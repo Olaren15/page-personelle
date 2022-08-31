@@ -29,4 +29,9 @@
 import LienSocial from "~/components/lien-social.vue";
 import GithubIcon from "~/components/icons/github-icon.vue";
 import LinkedInIcon from "~/components/icons/linked-icon.vue";
+import { definePageMeta } from "#imports";
+
+definePageMeta({
+  title: "Contact"
+});
 </script>

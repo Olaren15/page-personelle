@@ -18,10 +18,16 @@
 </template>
 
 <script setup lang="ts">
-import { useState } from "#imports";
+import { useHead, useRoute, useState } from "#imports";
+
+const route = useRoute();
+useHead(() => {
+  return {
+    title: `${route.meta.title} - Olaren.dev`
+  };
+});
 
 const isDrawerOpen = useState("isDrawerOpen", () => false);
-
 const click = () => {
   isDrawerOpen.value = false;
 };
