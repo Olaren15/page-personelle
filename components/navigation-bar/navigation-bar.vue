@@ -7,13 +7,13 @@
         </label>
       </div>
       <div class="navbar-center hidden md:flex">
-        <navigation-links :is-drawer="false" />
+        <NavigationLinks :is-drawer="false" />
       </div>
       <div class="navbar-center md:hidden">
-        <current-page-indicator />
+        <CurrentPageIndicator />
       </div>
       <div class="navbar-end flex">
-        <theme-switcher />
+        <ThemeSwitcher />
       </div>
     </div>
   </nav>
@@ -23,4 +23,5 @@
 import { Bars3Icon } from "@heroicons/vue/24/solid/index.js";
 import CurrentPageIndicator from "~/components/navigation-bar/current-page-indicator.vue";
 import NavigationLinks from "~/components/navigation-bar/navigation-links.vue";
-import ThemeSwitcher from "~/components/navigation-bar/theme-switcher.vue";</script>
+import ThemeSwitcher from "~/components/navigation-bar/theme-switcher.vue";
+</script>
