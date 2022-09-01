@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="props.lienNavigation" target="_blank">
+  <NuxtLink :to="props.to" target="_blank">
     <div class="flex stats shadow bg-neutral text-neutral-content my-4 md:mr-4">
       <div class="stat">
         <div class="stat-title">
@@ -18,7 +18,7 @@
 
 <script setup lang="ts">
 interface LienSocialProps {
-  lienNavigation: string,
+  to: string,
 }
 
 const props = defineProps<LienSocialProps>();
