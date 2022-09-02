@@ -22,6 +22,10 @@
       </SocialLink>
     </div>
 
+    <h2>M'envoyer un courriel</h2>
+
+    <SendEmailForm />
+
   </div>
 </template>
 
@@ -29,6 +33,7 @@
 import SocialLink from "~/components/social-link.vue";
 import GithubIcon from "~/components/icons/github-icon.vue";
 import LinkedInIcon from "~/components/icons/linked-icon.vue";
+import SendEmailForm from "~/components/send-email-form.vue";
 import { definePageMeta } from "#imports";
 
 definePageMeta({

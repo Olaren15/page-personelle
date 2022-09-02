@@ -1,5 +1,5 @@
 import { CompatibilityEvent, defineEventHandler } from "h3";
-import { validateBody, Type } from "h3-typebox";
+import { Type, validateBody } from "h3-typebox";
 import { createTransport } from "nodemailer";
 import Handlebars from "handlebars";
 import { useRuntimeConfig } from "#imports";
@@ -19,7 +19,7 @@ const transporter = createTransport({
 
 const emailTemplate = Handlebars.compile("<h1>Message de {{ firstName }} {{ lastName }}</h1><p>{{ text }}</p><p>Contacter à <a href='mailto:{{ email }}'>{{ email }}</a></p>");
 const nameTemplate = Handlebars.compile("{{ firstName }} {{ lastName }}");
-
+const subjectTemplate = Handlebars.compile("{{ subject }}");
 
 export default defineEventHandler(async (event: CompatibilityEvent) => {
   const body = await validateBody(event, Type.Object({
@@ -36,6 +36,10 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
       minLength: 1,
       maxLength: 100
     }),
+    subject: Type.String({
+      minLength: 1,
+      maxLength: 100
+    }),
     text: Type.String({
       minLength: 1,
       maxLength: 2000
@@ -48,7 +52,7 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
       address: "noreply@olaren.dev"
     },
     to: "catherine.gilbert15@gmail.com",
-    subject: `Message de ${nameTemplate(body)}`,
+    subject: subjectTemplate(body),
     html: emailTemplate(body)
   });
 
