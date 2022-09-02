@@ -18,5 +18,13 @@ export default defineNuxtConfig({
     options: {
       linkActiveClass: "active"
     }
+  },
+  runtimeConfig: {
+    smtp: {
+      host: "localhost",
+      port: 2525,
+      username: "replace me",
+      password: "replace me"
+    }
   }
 });
