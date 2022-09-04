@@ -82,9 +82,14 @@
 
 <script setup lang="ts">
 import { $fetch } from "ohmyfetch";
+import { useToaster } from "~/composables/useToaster";
+import { ToastType } from "~/models/toast-type";
 
-const onSubmit = async (event) => {
-  const formData = new FormData(event.target);
+const toaster = useToaster();
+
+const onSubmit = async (event: SubmitEvent) => {
+  const formElement = event.target as HTMLFormElement;
+  const formData = new FormData(formElement);
 
   try {
     await $fetch("/api/send-mail", {
@@ -93,14 +98,22 @@ const onSubmit = async (event) => {
         firstName: formData.get("firstName"),
         lastName: formData.get("lastName"),
         email: formData.get("email"),
-        subject: null,
+        subject: formData.get("subject"),
         text: formData.get("text")
       }
     });
 
-    event.target.reset();
-  } catch (e) {
+    formElement.reset();
 
+    toaster.makeToast({
+      message: "Votre courriel a été envoyé",
+      type: ToastType.Success
+    });
+  } catch (e) {
+    toaster.makeToast({
+      message: "Une erreur est survenue lors de l'envoi du courriel",
+      type: ToastType.Error
+    });
   }
 };
 </script>
