@@ -21,8 +21,8 @@
 <script setup lang="ts">
 import { useHead, useRoute, useState } from "#imports";
 import ToasterRoot from "~/components/toaster-root.vue";
-import NavigationBar from "~/components/navigation-bar/navigation-bar.vue"
-import NavigationLinks from "~/components/navigation-bar/navigation-links.vue"
+import NavigationBar from "~/components/navigation-bar.vue"
+import NavigationLinks from "~/components/navigation-links.vue"
 
 const route = useRoute();
 useHead(() => {

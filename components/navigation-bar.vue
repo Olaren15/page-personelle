@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import { Bars3Icon } from "@heroicons/vue/24/solid/index.js";
-import CurrentPageIndicator from "~/components/navigation-bar/current-page-indicator.vue";
-import NavigationLinks from "~/components/navigation-bar/navigation-links.vue";
-import ThemeSwitcher from "~/components/navigation-bar/theme-switcher.vue";
+import CurrentPageIndicator from "~/components/current-page-indicator.vue";
+import NavigationLinks from "~/components/navigation-links.vue";
+import ThemeSwitcher from "~/components/theme-switcher.vue";
 </script>

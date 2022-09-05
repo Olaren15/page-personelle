@@ -31,8 +31,8 @@
 
 <script setup lang="ts">
 import SocialLink from "~/components/social-link.vue";
-import GithubIcon from "~/components/icons/github-icon.vue";
-import LinkedInIcon from "~/components/icons/linked-icon.vue";
+import GithubIcon from "~/components/github-icon.vue";
+import LinkedInIcon from "~/components/linked-icon.vue";
 import SendEmailForm from "~/components/send-email-form.vue";
 import { definePageMeta } from "#imports";
 
