@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     typeCheck: true
   },
   modules: [
+    "@nuxt/content",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode"
   ],

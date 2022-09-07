@@ -8,7 +8,7 @@ import { usePages } from "~/composables/usePages";
 
 const router = useRouter();
 
-const pages = usePages();
+const pages = await usePages();
 const nomPage = useState("nomPage", () => pages.getPageFromRoute(router.currentRoute.value.path).title);
 
 router.beforeEach((guard) => {
