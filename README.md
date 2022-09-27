@@ -1,52 +1,39 @@
-# Nuxt 3 Minimal Starter
+# Olaren-dev-homepage
+Le code source de ma page personnelle (qui sera éventuellement disponible au [https://olaren.dev](https://olaren.dev))
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+## Développement local
 
-## Setup
+### Outils nécessaires :
+- Node JS
+- Yarn
+- Docker (optionnel)
 
-Make sure to install the dependencies:
 
-```bash
-# yarn
-yarn install
+1. Installer les dépendances
+   
+    ```bash
+    yarn install
+    ```
+2. Démarrer le serveur de développement
 
-# npm
-npm install
+   ```bash
+   yarn dev
+   ```
 
-# pnpm
-pnpm install --shamefully-hoist
-```
+3. (Optionnel) démarrer un server de courriel local
 
-## Development Server
+   ```bash
+   docker run -d -p 2525:25 -p 2000:80 rnwood/smtp4dev
+   ```
 
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
-
-# Technologies Used
+# Technologies utilisées
 
 - Nuxt 3
+- Nuxt content
 - Vue 3
 - Typescript
 - Tailwind css
 - Heroicons
 - DaisyUi
 - Color Mode
+- Nodemailer
