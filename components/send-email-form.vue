@@ -1,18 +1,18 @@
 <template>
   <form
-    action="/api/send-mail" method="post" autocomplete="on"
-    class="rounded-box form-control grid grid-cols-1 md:grid-cols-2 bg-neutral text-neutral-content p-8 pt-2"
-    @submit.prevent="onSubmit">
+      action="/api/send-mail" autocomplete="on" class="rounded-box form-control grid grid-cols-1 md:grid-cols-2"
+      method="post"
+      @submit.prevent="onSubmit">
 
     <div class="md:pr-4 pt-4">
       <label for="firstName" class="label">
-        <span class="label-text">Votre prénom</span>
+        <span>Votre prénom</span>
       </label>
       <input
-        id="firstName"
-        name="firstName"
-        type="text"
-        minlength="1"
+          id="firstName"
+          name="firstName"
+          type="text"
+          minlength="1"
         maxlength="100"
         required
         class="input input-bordered w-full" />
@@ -20,7 +20,7 @@
 
     <div class="md:pl-4 pt-4">
       <label for="lastName" class="label">
-        <span class="label-text">Votre nom de famille</span>
+        <span>Votre nom de famille</span>
       </label>
       <input
         id="lastName"
@@ -34,7 +34,7 @@
 
     <div class="md:pr-4 pt-4">
       <label for="subject" class="label">
-        <span class="label-text">Sujet</span>
+        <span>Sujet</span>
       </label>
       <input
         id="subject"
@@ -48,7 +48,7 @@
 
     <div class="md:pl-4 pt-4">
       <label for="email" class="label">
-        <span class="label-text">Votre adresse courriel</span>
+        <span>Votre adresse courriel</span>
       </label>
       <input
         id="email"
@@ -62,7 +62,7 @@
 
     <div class="pt-4 md:col-span-2">
       <label for="text" class="label">
-        <span class="label-text">Votre message</span>
+        <span>Votre message</span>
       </label>
       <textarea
         id="text"
@@ -81,9 +81,9 @@
 
 
 <script setup lang="ts">
-import { $fetch } from "ohmyfetch";
-import { useToaster } from "~/composables/useToaster";
-import { ToastType } from "~/models/toast-type";
+import {$fetch} from "ohmyfetch";
+import {useToaster} from "~/composables/useToaster";
+import {ToastType} from "~/models/toast-type";
 
 const toaster = useToaster();
 

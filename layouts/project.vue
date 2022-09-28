@@ -9,6 +9,7 @@
         class="container mx-auto p-10 prose md:prose-lg lg:prose-lg 2xl:prose-xl md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-lg">
         <slot />
       </div>
+      <PageFooter/>
     </div>
     <div class="drawer-side">
       <label for="page-drawer" class="drawer-overlay"></label>
@@ -19,10 +20,11 @@
 </template>
 
 <script setup lang="ts">
-import { useState } from "#imports";
+import {useState} from "#imports";
 import ToasterRoot from "~/components/toaster-root.vue";
 import NavigationBar from "~/components/navigation-bar.vue";
 import NavigationLinks from "~/components/navigation-links.vue";
+import PageFooter from "~/components/page-footer.vue";
 
 
 const isDrawerOpen = useState("isDrawerOpen", () => false);
