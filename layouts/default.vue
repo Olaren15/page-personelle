@@ -2,11 +2,11 @@
   <div class="subpixel-antialiased drawer">
     <input id="page-drawer" v-model="isDrawerOpen" class="drawer-toggle" type="checkbox"/>
     <div class="drawer-content flex flex-col">
-      <header>
+      <header class="sticky top-0 z-50">
         <NavigationBar/>
       </header>
       <div
-          class="container mx-auto p-10 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-lg">
+          class="container relative mx-auto p-10 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-lg">
         <slot/>
       </div>
       <PageFooter/>

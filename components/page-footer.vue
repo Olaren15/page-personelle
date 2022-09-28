@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded mt-auto">
+  <footer class="footer footer-center p-10 bg-neutral text-neutral-content rounded mt-auto">
     <div>
       <div class="grid grid-flow-col gap-8">
         <NuxtLink target="_blank" to="https://github.com/Olaren15">
@@ -11,7 +11,7 @@
       </div>
     </div>
     <div>
-      <p>Fait avec ❤️ pour les logiciels libres</p>
+      <p>Fait avec ❤️ par une amie de Blåhaj</p>
     </div>
   </footer>
 </template>
