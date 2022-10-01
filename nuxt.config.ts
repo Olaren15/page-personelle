@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from "nuxt";
+import {defineNuxtConfig} from "nuxt";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -7,11 +7,12 @@ export default defineNuxtConfig({
   },
   modules: [
     "@nuxt/content",
+    "@nuxt/image-edge",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode"
   ],
   colorMode: {
-    preference: "light",
+    preference: "system",
     dataValue: "theme",
     classSuffix: ""
   },

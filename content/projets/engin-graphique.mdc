@@ -1,0 +1,34 @@
+---
+title: 'Engin graphique'
+description: 'Engin graphique utilisant Vulkan pour afficher un terrain en voxels'
+---
+
+# Cobblestone
+
+Cet engin graphique a été un de mes projets qui a été le plus complexe. En effet, le rendu 3D est effectué en utilisant
+l'API graphique Vulkan. Celui-ci est un API open source de bas niveau permettant d'être le plus proche possible du
+processeur graphique. Le haut niveau de contrôle que procure Vulkan signifie qu'il faut presque tout faire soi-même: de
+la création du pipeline graphique à l'exécution des shaders, en passant par l'allocation manuelle de buffers.
+
+## Apercu
+
+::optimised-image
+---
+source: /img/cobblestone-screenshot.png
+fullWidth: true
+---
+::
+
+## Technologies utilisées
+
+- Language C++
+- Vulkan
+- CMake
+
+## Fonctionnalités
+
+- Créer un terrain
+  - Séparé en plusieurs "Chunks"
+  - Généré avec l'algorithme du "Perlin noise"
+- Rendu du terrain en 3D
+- Caméra en mouvement libre

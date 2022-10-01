@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer footer-center p-10 bg-neutral text-neutral-content rounded mt-auto">
+  <footer class="footer footer-center p-10 bg-neutral text-neutral-content mt-auto">
     <div>
       <div class="grid grid-flow-col gap-8">
         <NuxtLink target="_blank" to="https://github.com/Olaren15">
