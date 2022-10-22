@@ -1,5 +1,5 @@
 export interface Page {
-  route: string,
-  title: string,
-  children?: Page[],
+  route: string;
+  title: string;
+  children?: Page[];
 }

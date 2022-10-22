@@ -1,32 +1,32 @@
-import {defineNuxtConfig} from "nuxt";
+import { defineNuxtConfig } from "nuxt";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   typescript: {
-    typeCheck: true
+    typeCheck: true,
   },
   modules: [
     "@nuxt/content",
     "@nuxt/image-edge",
     "@nuxtjs/tailwindcss",
-    "@nuxtjs/color-mode"
+    "@nuxtjs/color-mode",
   ],
   colorMode: {
     preference: "system",
     dataValue: "theme",
-    classSuffix: ""
+    classSuffix: "",
   },
   router: {
     options: {
-      linkActiveClass: "active"
-    }
+      linkActiveClass: "active",
+    },
   },
   runtimeConfig: {
     smtp: {
       host: "localhost",
       port: 2525,
       username: "replace me",
-      password: "replace me"
-    }
-  }
+      password: "replace me",
+    },
+  },
 });

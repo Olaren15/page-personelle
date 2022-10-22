@@ -4,16 +4,15 @@
       <h1>Envoyez-moi un courriel</h1>
     </div>
 
-    <SendEmailForm/>
-
+    <SendEmailForm />
   </div>
 </template>
 
 <script setup lang="ts">
 import SendEmailForm from "~/components/send-email-form.vue";
-import {definePageMeta} from "#imports";
+import { definePageMeta } from "#imports";
 
 definePageMeta({
-  title: "Contact"
+  title: "Contact",
 });
 </script>

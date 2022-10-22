@@ -1,21 +1,24 @@
 <template>
   <form
-      action="/api/send-mail" autocomplete="on" class="rounded-box form-control grid grid-cols-1 md:grid-cols-2"
-      method="post"
-      @submit.prevent="onSubmit">
-
+    action="/api/send-mail"
+    autocomplete="on"
+    class="rounded-box form-control grid grid-cols-1 md:grid-cols-2"
+    method="post"
+    @submit.prevent="onSubmit"
+  >
     <div class="md:pr-4 pt-4">
       <label for="firstName" class="label">
         <span>Votre prénom</span>
       </label>
       <input
-          id="firstName"
-          name="firstName"
-          type="text"
-          minlength="1"
+        id="firstName"
+        name="firstName"
+        type="text"
+        minlength="1"
         maxlength="100"
         required
-        class="input input-bordered w-full" />
+        class="input input-bordered w-full"
+      />
     </div>
 
     <div class="md:pl-4 pt-4">
@@ -29,7 +32,8 @@
         minlength="1"
         maxlength="100"
         required
-        class="input input-bordered w-full " />
+        class="input input-bordered w-full"
+      />
     </div>
 
     <div class="md:pr-4 pt-4">
@@ -43,7 +47,8 @@
         minlength="1"
         maxlength="100"
         required
-        class="input input-bordered w-full" />
+        class="input input-bordered w-full"
+      />
     </div>
 
     <div class="md:pl-4 pt-4">
@@ -57,7 +62,8 @@
         minlength="1"
         maxlength="100"
         required
-        class="input input-bordered w-full " />
+        class="input input-bordered w-full"
+      />
     </div>
 
     <div class="pt-4 md:col-span-2">
@@ -70,20 +76,22 @@
         minlength="1"
         maxlength="2000"
         required
-        class="textarea textarea-bordered h-36 w-full " />
+        class="textarea textarea-bordered h-36 w-full"
+      />
     </div>
 
     <div class="pt-6 md:col-start-2 flex">
-      <button type="submit" class="btn btn-primary w-full md:ml-auto md:w-2/3">Envoyer</button>
+      <button type="submit" class="btn btn-primary w-full md:ml-auto md:w-2/3">
+        Envoyer
+      </button>
     </div>
   </form>
 </template>
 
-
 <script setup lang="ts">
-import {$fetch} from "ohmyfetch";
-import {useToaster} from "~/composables/useToaster";
-import {ToastType} from "~/models/toast-type";
+import { $fetch } from "ohmyfetch";
+import { useToaster } from "~/composables/useToaster";
+import { ToastType } from "~/models/toast-type";
 
 const toaster = useToaster();
 
@@ -99,20 +107,20 @@ const onSubmit = async (event: SubmitEvent) => {
         lastName: formData.get("lastName"),
         email: formData.get("email"),
         subject: formData.get("subject"),
-        text: formData.get("text")
-      }
+        text: formData.get("text"),
+      },
     });
 
     formElement.reset();
 
     toaster.makeToast({
       message: "Votre courriel a été envoyé",
-      type: ToastType.Success
+      type: ToastType.Success,
     });
   } catch (e) {
     toaster.makeToast({
       message: "Une erreur est survenue lors de l'envoi du courriel",
-      type: ToastType.Error
+      type: ToastType.Error,
     });
   }
 };

@@ -9,14 +9,14 @@ export const usePages = async () => {
     {
       route: "/projets",
       title: "Projets",
-      children: pagesProjets.map(page => {
+      children: pagesProjets.map((page) => {
         return {
           route: page._path,
-          title: page.title
+          title: page.title,
         };
-      })
+      }),
     },
-    { route: "/contact", title: "Contact" }
+    { route: "/contact", title: "Contact" },
   ];
 
   return {
@@ -37,6 +37,6 @@ export const usePages = async () => {
     },
     getPages: () => {
       return pages;
-    }
+    },
   };
 };

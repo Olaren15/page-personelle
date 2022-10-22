@@ -14,8 +14,10 @@ export const useToaster = () => {
       toasts.value = [...toasts.value, toast];
 
       setTimeout(() => {
-        toasts.value = toasts.value.filter(toastIter => toastIter.id !== toast.id);
+        toasts.value = toasts.value.filter(
+          (toastIter) => toastIter.id !== toast.id
+        );
       }, 4000);
-    }
+    },
   };
 };

@@ -1,29 +1,35 @@
 <template>
   <div class="subpixel-antialiased drawer">
-    <input id="page-drawer" v-model="isDrawerOpen" class="drawer-toggle" type="checkbox"/>
+    <input
+      id="page-drawer"
+      v-model="isDrawerOpen"
+      class="drawer-toggle"
+      type="checkbox"
+    />
     <div class="drawer-content flex flex-col">
       <header class="sticky top-0 z-50">
-        <NavigationBar/>
+        <NavigationBar />
       </header>
       <div
-          class="container relative mx-auto p-10 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-lg">
-        <slot/>
+        class="container relative mx-auto p-10 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-lg"
+      >
+        <slot />
       </div>
-      <PageFooter/>
+      <PageFooter />
     </div>
     <div class="drawer-side">
       <label for="page-drawer" class="drawer-overlay"></label>
-      <NavigationLinks :is-drawer="true" @link-click="click"/>
+      <NavigationLinks :is-drawer="true" @link-click="click" />
     </div>
-    <ToasterRoot/>
+    <ToasterRoot />
   </div>
 </template>
 
 <script setup lang="ts">
-import {useHead, useRoute, useState} from "#imports";
+import { useHead, useRoute, useState } from "#imports";
 import ToasterRoot from "~/components/toaster-root.vue";
-import NavigationBar from "~/components/navigation-bar.vue"
-import NavigationLinks from "~/components/navigation-links.vue"
+import NavigationBar from "~/components/navigation-bar.vue";
+import NavigationLinks from "~/components/navigation-links.vue";
 import PageFooter from "~/components/page-footer.vue";
 
 const route = useRoute();
@@ -31,8 +37,8 @@ useHead(() => {
   return {
     title: `${route.meta.title} - Olaren.dev`,
     htmlAttrs: {
-      lang: "fr"
-    }
+      lang: "fr",
+    },
   };
 });
 

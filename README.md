@@ -1,19 +1,21 @@
 # Olaren-dev-homepage
+
 Le code source de ma page personnelle (qui sera éventuellement disponible au [https://olaren.dev](https://olaren.dev))
 
 ## Développement local
 
 ### Outils nécessaires :
+
 - Node JS
 - Yarn
 - Docker (optionnel)
 
-
 1. Installer les dépendances
-   
-    ```bash
-    yarn install
-    ```
+
+   ```bash
+   yarn install
+   ```
+
 2. Démarrer le serveur de développement
 
    ```bash

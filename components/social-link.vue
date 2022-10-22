@@ -18,7 +18,7 @@
 
 <script setup lang="ts">
 interface LienSocialProps {
-  to: string,
+  to: string;
 }
 
 const props = defineProps<LienSocialProps>();

@@ -6,6 +6,6 @@
 import { definePageMeta } from "#imports";
 
 definePageMeta({
-  title: "À propos"
+  title: "À propos",
 });
 </script>

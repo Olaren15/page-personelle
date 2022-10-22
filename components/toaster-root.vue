@@ -1,7 +1,7 @@
 <template>
   <div id="toasterRoot" class="toast">
     <div
-      v-for="(toast) in toasts"
+      v-for="toast in toasts"
       :key="toast.id"
       :class="{
         alert: true,
@@ -9,8 +9,9 @@
         'alert-info': toast.type === 'info',
         'alert-success': toast.type === 'success',
         'alert-warning': toast.type === 'warning',
-        'alert-error': toast.type === 'error'
-      }">
+        'alert-error': toast.type === 'error',
+      }"
+    >
       <div>
         <span>{{ toast.message }}</span>
       </div>

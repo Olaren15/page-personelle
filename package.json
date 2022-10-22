@@ -3,7 +3,8 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "start": "nuxt start"
+    "start": "nuxt start",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@heroicons/vue": "^2.0.7",
@@ -23,6 +24,8 @@
     "h3": "^0.7.16",
     "h3-typebox": "^0.2.0",
     "handlebars": "^4.7.7",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "nodemailer": "^6.7.8",
     "nuxt": "3.0.0-rc.8",
     "postcss": "^8.4.16",

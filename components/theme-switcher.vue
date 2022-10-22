@@ -20,5 +20,4 @@ watch(isDarkTheme, () => {
 onMounted(() => {
   isDarkTheme.value = colorMode.value === "dark";
 });
-
 </script>
