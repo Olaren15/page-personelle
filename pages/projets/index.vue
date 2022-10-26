@@ -9,7 +9,7 @@
         v-for="project in list"
         :key="project._path"
         :href="project._path"
-        class="flex align-middle justify-between bg-neutral text-neutral-content mt-4 p-4 rounded-xl"
+        class="flex align-middle justify-between bg-base-200 text-base-200-content mt-4 p-4 rounded-xl"
       >
         <div>
           <h2 class="text-lg font-bold">{{ project.title }}</h2>

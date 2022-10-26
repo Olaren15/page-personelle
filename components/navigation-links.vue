@@ -1,9 +1,7 @@
 <template>
   <ul
     :class="
-      props.isDrawer
-        ? 'menu p-4 w-80 bg-neutral-focus'
-        : 'menu menu-horizontal p-0'
+      props.isDrawer ? 'menu p-4 w-80 bg-neutral' : 'menu menu-horizontal p-0'
     "
   >
     <li v-for="page in pages" :key="page.route" class="p-1">
@@ -17,9 +15,7 @@
       <ul
         v-if="page.children"
         :class="
-          props.isDrawer
-            ? 'p-2 bg-neutral-focus static flex'
-            : 'p-2 bg-neutral-focus'
+          props.isDrawer ? 'p-2 bg-neutral static flex' : 'p-2 bg-neutral'
         "
       >
         <li v-for="subPage in page.children" :key="subPage.route" class="p-1">

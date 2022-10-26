@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <div class="px-6 navbar bg-neutral-focus text-neutral-content">
+    <div class="px-6 navbar bg-neutral text-neutral-content">
       <div
         class="container mx-auto md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-lg"
       >
