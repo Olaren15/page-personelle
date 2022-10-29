@@ -11,7 +11,11 @@
         <NavigationBar />
       </header>
       <div
-        class="container relative mx-auto p-10 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-lg"
+        :class="`container relative mx-auto p-10 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-lg ${
+          route.meta.needsProseText
+            ? 'prose md:prose-lg lg:prose-lg 2xl:prose-xl'
+            : ''
+        }`"
       >
         <slot />
       </div>
@@ -35,7 +39,9 @@ import PageFooter from "~/components/page-footer.vue";
 const route = useRoute();
 useHead(() => {
   return {
-    title: `${route.meta.title} - Olaren.dev`,
+    title: route.meta.usesCustomTitle
+      ? undefined
+      : `${route.meta.title} - Olaren.dev`,
     htmlAttrs: {
       lang: "fr",
     },

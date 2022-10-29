@@ -33,6 +33,7 @@ useHead(() => {
 });
 
 definePageMeta({
-  layout: "project",
+  needsProseText: true,
+  usesCustomTitle: true,
 });
 </script>
