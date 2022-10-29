@@ -37,5 +37,5 @@ Le code source de ma page personnelle (qui sera éventuellement disponible au [h
 - Tailwind css
 - Heroicons
 - DaisyUi
-- Color Mode
+- VueUse
 - Nodemailer

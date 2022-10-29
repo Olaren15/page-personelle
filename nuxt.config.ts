@@ -9,13 +9,8 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxt/image-edge",
     "@nuxtjs/tailwindcss",
-    "@nuxtjs/color-mode",
+    "@vueuse/nuxt",
   ],
-  colorMode: {
-    preference: "system",
-    dataValue: "theme",
-    classSuffix: "",
-  },
   router: {
     options: {
       linkActiveClass: "active",
