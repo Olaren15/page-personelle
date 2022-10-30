@@ -1,5 +1,5 @@
 <template>
-  <div class="subpixel-antialiased drawer">
+  <div tabindex="0" class="subpixel-antialiased drawer">
     <input
       id="page-drawer"
       v-model="isDrawerOpen"
