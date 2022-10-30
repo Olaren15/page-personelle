@@ -5,6 +5,7 @@
       v-model="isDrawerOpen"
       class="drawer-toggle"
       type="checkbox"
+      aria-label="Ouvrir le menu de navigation"
     />
     <div class="drawer-content flex flex-col">
       <header class="sticky top-0 z-50">
@@ -45,18 +46,6 @@ useHead(() => {
     htmlAttrs: {
       lang: "fr",
     },
-    meta: [
-      {
-        name: "theme-color",
-        content: "#3D4451",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        name: "theme-color",
-        content: "#191D24",
-        media: "(prefers-color-scheme: dark)",
-      },
-    ],
   };
 });
 

@@ -1,6 +1,10 @@
 <template>
   <NuxtLink :to="props.source" target="_blank">
-    <nuxt-picture :class="{ 'w-full': props.fullWidth }" :src="props.source" />
+    <nuxt-picture
+      :class="{ 'w-full': props.fullWidth }"
+      :src="props.source"
+      :alt="props.alt"
+    />
   </NuxtLink>
 </template>
 
@@ -8,6 +12,7 @@
 interface OptimisedImageProps {
   source: string;
   fullWidth: boolean;
+  alt: string;
 }
 
 const props = defineProps<OptimisedImageProps>();

@@ -2,6 +2,7 @@
   <button
     :key="updateSunMoon"
     :class="`swap swap-rotate ${colorMode === 'dark' ? 'swap-active' : ''}`"
+    aria-label="Changer le thème"
     @click="next()"
   >
     <SunIcon class="swap-on w-8 h-8" />

@@ -24,4 +24,18 @@ export default defineNuxtConfig({
       password: "replace me",
     },
   },
+  head: {
+    meta: [
+      {
+        name: "theme-color",
+        content: "#3D4451",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        name: "theme-color",
+        content: "#191D24",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+  },
 });

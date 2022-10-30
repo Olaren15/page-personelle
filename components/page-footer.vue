@@ -4,12 +4,17 @@
   >
     <div>
       <div class="grid grid-flow-col gap-8">
-        <NuxtLink target="_blank" to="https://github.com/Olaren15">
+        <NuxtLink
+          target="_blank"
+          to="https://github.com/Olaren15"
+          aria-label="Lien vers mon compte Github"
+        >
           <GithubIcon class="w-8" />
         </NuxtLink>
         <NuxtLink
           target="_blank"
           to="https://www.linkedin.com/in/catherine-gilbert-a1525a1b5/"
+          aria-label="Lien vers mon profil LinkedIn"
         >
           <LinkedInIcon class="w-8" />
         </NuxtLink>

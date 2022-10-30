@@ -1,14 +1,20 @@
 <template>
-  <iframe
-    :src="`https://www.youtube.com/embed/${props.videoId}`"
+  <LiteYouTubeEmbed
+    :id="props.videoId"
     :title="props.title"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-    class="w-full aspect-video"
+    announce="Regarder"
+    poster="maxresdefault"
   />
 </template>
 
 <script lang="ts" setup>
+import { defineComponent } from "vue";
+import LiteYouTubeEmbed from "vue-lite-youtube-embed";
+
+defineComponent({
+  components: { LiteYouTubeEmbed },
+});
+
 interface YoutubeEmbedProps {
   videoId: string;
   title: string;
@@ -16,3 +22,7 @@ interface YoutubeEmbedProps {
 
 const props = defineProps<YoutubeEmbedProps>();
 </script>
+
+<style>
+@import "vue-lite-youtube-embed/dist/style.css";
+</style>

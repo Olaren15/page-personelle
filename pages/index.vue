@@ -3,9 +3,18 @@
 </template>
 
 <script setup lang="ts">
-import { definePageMeta } from "#imports";
+import { definePageMeta, useHead } from "#imports";
 
 definePageMeta({
   title: "À propos",
+});
+
+useHead({
+  meta: [
+    {
+      name: "description",
+      content: "À propos de moi",
+    },
+  ],
 });
 </script>

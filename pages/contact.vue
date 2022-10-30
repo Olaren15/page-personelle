@@ -10,9 +10,18 @@
 
 <script setup lang="ts">
 import SendEmailForm from "~/components/send-email-form.vue";
-import { definePageMeta } from "#imports";
+import { definePageMeta, useHead } from "#imports";
 
 definePageMeta({
   title: "Contact",
+});
+
+useHead({
+  meta: [
+    {
+      name: "description",
+      content: "Contactez-moi par courriel",
+    },
+  ],
 });
 </script>

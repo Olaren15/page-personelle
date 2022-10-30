@@ -23,9 +23,18 @@
 
 <script setup lang="ts">
 import { ChevronRightIcon } from "@heroicons/vue/24/solid/index.js";
-import { definePageMeta } from "#imports";
+import { definePageMeta, useHead } from "#imports";
 
 definePageMeta({
   title: "Projets",
+});
+
+useHead({
+  meta: [
+    {
+      name: "description",
+      content: "Voir la liste de mes projets personnels",
+    },
+  ],
 });
 </script>

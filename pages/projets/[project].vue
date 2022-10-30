@@ -26,9 +26,12 @@ const { data } = await useAsyncData(
 useHead(() => {
   return {
     title: `${data.value.title} - Olaren.dev`,
-    htmlAttrs: {
-      lang: "fr",
-    },
+    meta: [
+      {
+        name: "description",
+        content: `Voir en quoi consiste mon projet de ${data.value.title}`,
+      },
+    ],
   };
 });
 
