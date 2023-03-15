@@ -35,6 +35,6 @@
     "vue": "^3.2.41",
     "vue-lite-youtube-embed": "^1.0.4",
     "vue-tsc": "^1.0.9",
-    "webpack": "^5.74.0"
+    "webpack": "^5.76.0"
   }
 }
