@@ -1,6 +1,7 @@
 ---
 import "@fontsource/zen-kaku-gothic-new";
 import { obtenirLangueSelonUrl } from "../i18n/utils";
+import Navigation from "../components/navigation.astro";
 
 interface Props {
   titre: string;
@@ -20,9 +21,12 @@ const langue = obtenirLangueSelonUrl(Astro.url);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{titre}</title>
   </head>
-  <body>
-    <slot />
+  <body
+    class="bg-light-background dark:bg-dark-background text-light-foreground dark:text-dark-foreground min-h-screen"
+  >
+    <Navigation />
+    <div class="w-full p-2 sm:p-4 md:max-w-screen-md xl:max-w-screen-lg mx-auto">
+      <slot />
+    </div>
   </body>
 </html>
-
-<style is:global></style>

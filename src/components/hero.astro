@@ -1,0 +1,22 @@
+---
+import { obtenirLangueSelonUrl, utiliserTraductions } from "../i18n/utils";
+
+const langue = obtenirLangueSelonUrl(Astro.url);
+const t = utiliserTraductions(langue);
+---
+
+<div class="pt-4 md:pt-6 pb-6 md:pb-8 flex flex-col md:flex-row md:items-center justify-between gap-y-6">
+  <div class="justify-self-start">
+    <h1 class="text-5xl font-extrabold text-main">{t("accueil.hero.nom")}</h1>
+    <h2 class="mt-1 text-3xl opacity-90">{t("accueil.hero.poste")}</h2>
+  </div>
+  <div class="self-end p-2">
+    <img
+      class="rounded-3xl drop-shadow-xl h-[500px] w-auto"
+      src="https://placehold.co/600x800"
+      alt={t("accueil.hero.photo.alt")}
+      width="375"
+      height="500"
+    />
+  </div>
+</div>
