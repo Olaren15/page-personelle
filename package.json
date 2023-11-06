@@ -21,6 +21,7 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
+    "@iconify-json/heroicons": "^1.1.13",
     "@typescript-eslint/eslint-plugin": "^6.9.1",
     "@typescript-eslint/parser": "^6.9.1",
     "eslint": "^8.53.0",
@@ -29,6 +30,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",
     "prettier": "3.0.3",
-    "prettier-plugin-astro": "^0.12.1"
+    "prettier-plugin-astro": "^0.12.1",
+    "unplugin-icons": "^0.17.3"
   }
 }

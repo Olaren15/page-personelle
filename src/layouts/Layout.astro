@@ -1,5 +1,6 @@
 ---
 import "@fontsource/zen-kaku-gothic-new";
+
 import { obtenirLangueSelonUrl } from "../i18n/utils";
 import Navigation from "../components/navigation.astro";
 
@@ -25,9 +26,11 @@ const langue = obtenirLangueSelonUrl(Astro.url);
   <body
     class="bg-light-background dark:bg-dark-background text-light-foreground dark:text-dark-foreground min-h-screen"
   >
-    <Navigation />
     <div class="w-full p-2 sm:p-4 md:max-w-screen-md xl:max-w-screen-lg mx-auto">
-      <slot />
+      <Navigation />
+      <main>
+        <slot />
+      </main>
     </div>
   </body>
 </html>

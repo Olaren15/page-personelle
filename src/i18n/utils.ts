@@ -6,14 +6,18 @@ export function obtenirLangueSelonUrl(url: URL) {
   return langueParDefaut;
 }
 
-export function utiliserTraductions(language: keyof typeof messages) {
+export function obtenirLangueOpposee(langue: keyof typeof messages) {
+  return (langue === "fr" ? "en" : "fr") as keyof typeof messages;
+}
+
+export function utiliserTraductions(langue: keyof typeof messages) {
   return function t(key: keyof (typeof messages)[typeof langueParDefaut]) {
-    return messages[language][key] || messages[langueParDefaut][key];
+    return messages[langue][key] || messages[langueParDefaut][key];
   };
 }
 
-export function utiliserCheminTraduit(language: keyof typeof messages) {
-  return function traduireChemin(path: string, l: string = language) {
-    return l === langueParDefaut ? path : `/${l}${path}`;
+export function utiliserCheminTraduit(langue: keyof typeof messages) {
+  return function traduireChemin(chemin: string, cheminLangue: string = langue) {
+    return cheminLangue === langueParDefaut ? chemin : `/${cheminLangue}${chemin}`;
   };
 }

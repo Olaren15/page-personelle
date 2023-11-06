@@ -1,0 +1,18 @@
+---
+import { obtenirLangueOpposee, obtenirLangueSelonUrl } from "../i18n/utils";
+import { utiliserCheminTraduit } from "../i18n/utils";
+import { langues } from "../i18n/messages";
+import IconeLangue from "~icons/heroicons/language";
+
+const langueCourante = obtenirLangueSelonUrl(Astro.url);
+const langueDestination = obtenirLangueOpposee(langueCourante);
+const traduireChemin = utiliserCheminTraduit(langueDestination);
+---
+
+<a
+  href={traduireChemin("/")}
+  class="transition hover:text-light-accent dark:hover:text-dark-accent items-center inline-flex"
+>
+  <IconeLangue aria-hidden="true" />
+  <span class="pl-1">{langues[langueDestination]}</span>
+</a>

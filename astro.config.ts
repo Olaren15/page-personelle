@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
+import Icons from "unplugin-icons/vite";
 
 export default defineConfig({
   site: "https://olaren.dev",
@@ -16,4 +17,11 @@ export default defineConfig({
       },
     }),
   ],
+  vite: {
+    plugins: [
+      Icons({
+        compiler: "astro",
+      }),
+    ],
+  },
 });
