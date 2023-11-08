@@ -10,7 +10,7 @@ export default {
         ...defaultTheme.screens,
       },
       fontFamily: {
-        sans: ["Zen Kaku Gothic New", ...defaultTheme.fontFamily.sans],
+        sans: ["Urbanist Variable", ...defaultTheme.fontFamily.sans],
       },
     },
     colors: {
