@@ -25,5 +25,6 @@ export default {
       main: "#8B83B8",
     },
   },
+  darkMode: ["class", ".theme-sombre"],
   plugins: [],
 } satisfies Config;

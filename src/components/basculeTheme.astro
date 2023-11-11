@@ -1,0 +1,47 @@
+---
+import IconeSoleil from "~icons/heroicons/sun-solid";
+import IconeLune from "~icons/heroicons/moon-solid";
+import { obtenirLangueSelonUrl, utiliserTraductions } from "../i18n/utils";
+
+const langueCourante = obtenirLangueSelonUrl(Astro.url);
+const t = utiliserTraductions(langueCourante);
+---
+
+<gestionnaire-theme class="inline-flex items-center">
+  <label class="p-2 relative inline-grid place-content-center hover:text-light-accent dark:hover:text-dark-accent">
+    <span class="sr-only">{t("navigation.bascule-themme.description")}</span>
+    <input class="peer appearance-none col-start-1 row-start-1" type="checkbox" />
+    <IconeSoleil
+      role="presentation"
+      aria-hidden="true"
+      class="col-start-1 row-start-1 transition-opacity opacity-0 peer-checked:opacity-100"
+    />
+    <IconeLune
+      role="presentation"
+      aria-hidden="true"
+      class="col-start-1 row-start-1 transition-opacity opacity-100 peer-checked:opacity-0"
+    />
+  </label>
+</gestionnaire-theme>
+
+<script>
+  import { appliquerTheme, obtenirPreferenceTheme, sauvegarderPreferenceTheme } from "../theme/utils";
+
+  class GestionnaireTheme extends HTMLElement {
+    constructor() {
+      super();
+
+      const checkbox = this.querySelector("input") as HTMLInputElement;
+      const themeDepart = obtenirPreferenceTheme();
+      checkbox.checked = themeDepart === "sombre";
+
+      checkbox.addEventListener("change", (evenement: Event) => {
+        const themeAAppliquer = (evenement.target as HTMLInputElement).checked ? "sombre" : "clair";
+        appliquerTheme(themeAAppliquer);
+        sauvegarderPreferenceTheme(themeAAppliquer);
+      });
+    }
+  }
+
+  customElements.define("gestionnaire-theme", GestionnaireTheme);
+</script>

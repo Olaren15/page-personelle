@@ -20,10 +20,14 @@ const langue = obtenirLangueSelonUrl(Astro.url);
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <script>
+      import { appliquerTheme, obtenirPreferenceTheme } from "../theme/utils.ts";
+      appliquerTheme(obtenirPreferenceTheme());
+    </script>
     <title>{titre}</title>
   </head>
   <body
-    class="bg-light-background dark:bg-dark-background text-light-foreground dark:text-dark-foreground min-h-screen"
+    class="bg-light-background dark:bg-dark-background text-light-foreground dark:text-dark-foreground min-h-screen transition"
   >
     <div class="w-full p-2 sm:p-4 md:max-w-screen-md xl:max-w-screen-lg mx-auto">
       <Navigation />
