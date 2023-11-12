@@ -20,7 +20,7 @@ export const messages = {
     "ponctuation.point": ".",
     "accueil.titre": "Catherine Gilbert",
     "accueil.description": "About Catherine Gilbert",
-    "accueil.hero.salutation": "Hi my name is",
+    "accueil.hero.salutation": "Hi, my name is",
     "accueil.hero.prenom": "Catherine",
     "accueil.hero.nom": "Gilbert",
     "accueil.hero.poste": "I'm a Full-Stack Developer.",
