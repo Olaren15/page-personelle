@@ -4,8 +4,8 @@ import Hero from "../components/hero.astro";
 import GabaritBase from "../layouts/gabaritBase.astro";
 import Conteneur from "../components/conteneur.astro";
 import Navigation from "../components/navigation/navigation.astro";
-import LoremIpsum from "../components/loremIpsum.astro";
 import PiedDePage from "../components/piedDePage/piedDePage.astro";
+import EnConstruction from "../components/enConstruction.astro";
 
 const langue = obtenirLangueSelonUrl(Astro.url);
 const t = utiliserTraductions(langue);
@@ -21,7 +21,7 @@ const t = utiliserTraductions(langue);
       <!-- 4rem est la hauteur de la barre de navigation --->
       <div class="mt-[calc(100vh-4rem)]">
         <Conteneur>
-          <LoremIpsum />
+          <EnConstruction />
         </Conteneur>
       </div>
     </main>

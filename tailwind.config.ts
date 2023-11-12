@@ -7,6 +7,7 @@ export default {
     extend: {
       screens: {
         xs: "475px",
+        "mobile-landscape": { raw: "(max-height: 600px)" },
         ...defaultTheme.screens,
       },
       fontFamily: {
