@@ -1,7 +1,7 @@
 ---
 import IconeSoleil from "~icons/heroicons/sun-solid";
 import IconeLune from "~icons/heroicons/moon-solid";
-import { obtenirLangueSelonUrl, utiliserTraductions } from "../i18n/utils";
+import { obtenirLangueSelonUrl, utiliserTraductions } from "../../i18n/utils";
 
 const langueCourante = obtenirLangueSelonUrl(Astro.url);
 const t = utiliserTraductions(langueCourante);
@@ -25,7 +25,7 @@ const t = utiliserTraductions(langueCourante);
 </gestionnaire-theme>
 
 <script>
-  import { appliquerTheme, obtenirPreferenceTheme, sauvegarderPreferenceTheme } from "../theme/utils";
+  import { appliquerTheme, obtenirPreferenceTheme, sauvegarderPreferenceTheme } from "../../theme/utils";
 
   class GestionnaireTheme extends HTMLElement {
     constructor() {

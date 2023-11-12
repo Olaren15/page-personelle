@@ -2,9 +2,10 @@
 import { obtenirLangueSelonUrl, utiliserTraductions } from "../i18n/utils";
 import Hero from "../components/hero.astro";
 import GabaritBase from "../layouts/gabaritBase.astro";
-import Container from "../components/container.astro";
-import Navigation from "../components/navigation.astro";
+import Conteneur from "../components/conteneur.astro";
+import Navigation from "../components/navigation/navigation.astro";
 import LoremIpsum from "../components/loremIpsum.astro";
+import PiedDePage from "../components/piedDePage/piedDePage.astro";
 
 const langue = obtenirLangueSelonUrl(Astro.url);
 const t = utiliserTraductions(langue);
@@ -19,10 +20,11 @@ const t = utiliserTraductions(langue);
       <Hero />
       <!-- 4rem est la hauteur de la barre de navigation --->
       <div class="mt-[calc(100vh-4rem)]">
-        <Container>
+        <Conteneur>
           <LoremIpsum />
-        </Container>
+        </Conteneur>
       </div>
     </main>
+    <PiedDePage />
   </div>
 </GabaritBase>
