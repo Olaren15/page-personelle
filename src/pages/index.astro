@@ -1,14 +1,28 @@
 ---
 import { obtenirLangueSelonUrl, utiliserTraductions } from "../i18n/utils";
-import Layout from "../layouts/Layout.astro";
 import Hero from "../components/hero.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Container from "../components/container.astro";
+import Navigation from "../components/navigation.astro";
 import LoremIpsum from "../components/loremIpsum.astro";
 
 const langue = obtenirLangueSelonUrl(Astro.url);
 const t = utiliserTraductions(langue);
 ---
 
-<Layout titre={t("accueil.titre")} description={t("accueil.description")}>
-  <Hero />
-  <LoremIpsum />
-</Layout>
+<BaseLayout titre={t("accueil.titre")} description={t("accueil.description")}>
+  <div class="flex flex-col">
+    <div class="z-10">
+      <Navigation />
+    </div>
+    <main>
+      <Hero />
+      <!-- 4rem est la hauteur de la barre de navigation --->
+      <div class="mt-[calc(100vh-4rem)]">
+        <Container>
+          <LoremIpsum />
+        </Container>
+      </div>
+    </main>
+  </div>
+</BaseLayout>

@@ -1,22 +1,49 @@
 ---
 import { obtenirLangueSelonUrl, utiliserTraductions } from "../i18n/utils";
+import { Image } from "astro:assets";
+
+import forme1 from "../images/forme1.svg";
+import forme2 from "../images/forme2.svg";
+import forme3 from "../images/forme3.svg";
 
 const langue = obtenirLangueSelonUrl(Astro.url);
 const t = utiliserTraductions(langue);
 ---
 
-<div class="pt-4 md:pt-6 pb-6 md:pb-8 flex flex-col md:flex-row md:items-center justify-between gap-y-6">
-  <div class="justify-self-start">
-    <h1 class="text-5xl font-bold tracking-tight text-main">{t("accueil.hero.nom")}</h1>
-    <h2 class="mt-1 text-3xl opacity-90">{t("accueil.hero.poste")}</h2>
-  </div>
-  <div class="p-2">
-    <img
-      class="rounded-3xl drop-shadow-xl max-h-[500px] xs:h-[500px] w-auto"
-      src="https://placehold.co/600x800"
-      alt={t("accueil.hero.photo.alt")}
-      width="375"
-      height="500"
-    />
-  </div>
+<div
+  class="flex flex-col flex-grow justify-center items-center text-center
+    absolute top-0 bottom-0 left-0 right-0 p-2
+    overflow-hidden"
+>
+  <h1 class="text-5xl font-bold tracking-tight">
+    {t("accueil.hero.salutation")}{" "}
+    <span class="text-transparent bg-clip-text bg-gradient-to-tr from-main-darker to-main"
+      >{t("accueil.hero.prenom")}&nbsp;{t("accueil.hero.nom")}{t("ponctuation.point")}</span
+    >
+  </h1>
+  <h2 class="mt-4 text-3xl opacity-90">{t("accueil.hero.poste")}</h2>
+  <Image
+    aria-hidden="true"
+    role="presentation"
+    class="absolute -z-10 bottom-0 right-0 translate-x-1/3 translate-y-1/3"
+    src={forme1}
+    alt=""
+    loading="eager"
+  />
+  <Image
+    aria-hidden="true"
+    role="presentation"
+    class="absolute -z-10 top-0 left-0 translate-y-[-10%] hidden md:block"
+    src={forme2}
+    alt=""
+    loading="eager"
+  />
+  <Image
+    aria-hidden="true"
+    role="presentation"
+    class="absolute -z-10 top-0 left-0 rotate-[30deg] translate-x-[-45%] translate-y-[-50%] md:hidden"
+    src={forme3}
+    alt=""
+    loading="eager"
+  />
 </div>
