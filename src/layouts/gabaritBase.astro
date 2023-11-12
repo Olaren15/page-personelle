@@ -2,6 +2,7 @@
 import "@fontsource-variable/urbanist";
 
 import { obtenirLangueSelonUrl } from "../i18n/utils";
+import LienContenuPrincipal from "../components/lienContenuPrincipal.astro";
 
 interface Props {
   titre: string;
@@ -36,6 +37,7 @@ const langue = obtenirLangueSelonUrl(Astro.url);
     <title>{titre}</title>
   </head>
   <body class="bg-light-background dark:bg-dark-background text-light-foreground dark:text-dark-foreground transition">
+    <LienContenuPrincipal />
     <slot />
   </body>
 </html>

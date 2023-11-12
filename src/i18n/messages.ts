@@ -14,7 +14,8 @@ export const messages = {
     "accueil.hero.prenom": "Catherine",
     "accueil.hero.nom": "Gilbert",
     "accueil.hero.poste": "Je suis une développeuse full-stack.",
-    "navigation.bascule-themme.description": "Activer le mode sombre",
+    "accessibilite.navigation.contenu-principal": "Passer au contenu principal.",
+    "navigation.bascule-themme.description": "Activer le mode sombre.",
   },
   en: {
     "ponctuation.point": ".",
@@ -24,6 +25,7 @@ export const messages = {
     "accueil.hero.prenom": "Catherine",
     "accueil.hero.nom": "Gilbert",
     "accueil.hero.poste": "I'm a Full-Stack Developer.",
-    "navigation.bascule-themme.description": "Enable dark mode",
+    "accessibilite.navigation.contenu-principal": "Skip to main content",
+    "navigation.bascule-themme.description": "Enable dark mode.",
   },
 };

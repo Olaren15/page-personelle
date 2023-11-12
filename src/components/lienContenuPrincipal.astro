@@ -1,0 +1,12 @@
+---
+import { obtenirLangueSelonUrl, utiliserTraductions } from "../i18n/utils";
+
+const langueCourante = obtenirLangueSelonUrl(Astro.url);
+const t = utiliserTraductions(langueCourante);
+---
+
+<a
+  href="#contenu-principal"
+  class="sr-only focus:not-sr-only bg-light-background dark:bg-dark-background focus:inline-block focus:p-4 underline"
+  >{t("accessibilite.navigation.contenu-principal")}</a
+>
