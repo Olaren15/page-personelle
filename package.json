@@ -17,6 +17,7 @@
     "@astrojs/tailwind": "^5.0.2",
     "@fontsource-variable/urbanist": "^5.0.18",
     "astro": "^3.4.3",
+    "astro-compress": "^2.2.3",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2"
   },
