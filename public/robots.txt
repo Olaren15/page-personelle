@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://olaren.dev/sitemap-index.xml
+Sitemap: https://www.olaren.dev/sitemap-index.xml
