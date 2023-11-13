@@ -1,6 +1,6 @@
 # Page accueil
 
-Le code source de ma page personnelle (qui sera éventuellement disponible au [https://olaren.dev](https://olaren.dev))
+Le code source de ma page personnelle (qui est disponible au [https://www.olaren.dev](https://www.olaren.dev))
 
 ## Développement local
 
