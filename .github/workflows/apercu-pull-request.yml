@@ -12,3 +12,6 @@ jobs:
     if: "${{ github.event.pull_request.head.repo.full_name == github.repository }}"
     needs: build
     uses: ./.github/workflows/deploiement-firebase.yml
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
+      firebase-service-account: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PAGE_WEB_E1C35 }}

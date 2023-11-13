@@ -3,11 +3,17 @@ name: Déploiement sur Firebase
 on:
   workflow_call:
     inputs:
-      firebaseChannelId:
+      firebase-channel-id:
         description: Le channelId à utiliser pour le déploiement firebase. Auto généré si laissé vide
         default: ""
         required: false
         type: string
+
+    secrets:
+      github-token:
+        required: true
+      firebase-service-account:
+        required: true
 
 jobs:
   deploiement:
@@ -22,7 +28,7 @@ jobs:
       - name: Déploiement sur Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_PAGE_WEB_E1C35 }}"
-          channelId: ${{ inputs.firebaseChannelId }}
+          repoToken: ${{ secrets.github-token }}
+          firebaseServiceAccount: ${{ secrets.firebase-service-account }}
+          channelId: ${{ inputs.firebase-channel-id }}
           projectId: page-web-e1c35
