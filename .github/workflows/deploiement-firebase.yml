@@ -19,6 +19,9 @@ jobs:
   deploiement:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout du dépot
+        uses: actions/checkout@v4
+
       - name: Obtention du site généré
         uses: actions/download-artifact@v3
         with:
