@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+  version="1.1"
+  viewBox="0 0 600 600"
+  id="svg2"
+  xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="m 430.62293,108.67703 c 61.01399,25.6993 103.49652,76.92308 92.30771,135.31469 C 511.74183,302.38333 432.546,435.94974 363.49006,459.02666 294.43411,482.10358 143.03553,443.9917 108.59497,382.45324 74.154411,320.91478 101.55193,185.21129 155.22326,139.58193 208.89459,93.952558 369.60894,82.977729 430.62293,108.67703"
+    fill="url(#LinearGradient1000)"
+    transform="matrix(1.3367454,0,0,1.3367454,-113.32631,-57.266819)"
+    id="path1"/>
+  <defs
+    id="defs2">
+    <linearGradient
+      id="LinearGradient1000"
+      gradientTransform="rotate(223, 0.5, 0.5)">
+      <stop
+        stop-color="#d2a1c1"
+        offset="0"
+        id="stop1"/>
+      <stop
+        stop-color="#bb669d"
+        offset="1"
+        id="stop2"/>
+    </linearGradient>
+  </defs>
+</svg>

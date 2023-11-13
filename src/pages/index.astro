@@ -1,0 +1,30 @@
+---
+import { obtenirLangueSelonUrl, utiliserTraductions } from "../i18n/utils";
+import Hero from "../components/hero.astro";
+import GabaritBase from "../layouts/gabaritBase.astro";
+import Conteneur from "../components/conteneur.astro";
+import Navigation from "../components/navigation/navigation.astro";
+import PiedDePage from "../components/piedDePage/piedDePage.astro";
+import EnConstruction from "../components/enConstruction.astro";
+
+const langue = obtenirLangueSelonUrl(Astro.url);
+const t = utiliserTraductions(langue);
+---
+
+<GabaritBase titre={t("accueil.titre")} description={t("accueil.description")}>
+  <div class="flex flex-col">
+    <div class="z-10">
+      <Navigation />
+    </div>
+    <main id="contenu-principal">
+      <Hero />
+      <!-- 4rem est la hauteur de la barre de navigation --->
+      <div class="mt-[calc(100vh-4rem)]">
+        <Conteneur>
+          <EnConstruction />
+        </Conteneur>
+      </div>
+    </main>
+    <PiedDePage />
+  </div>
+</GabaritBase>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+  version="1.1"
+  viewBox="0 0 600 600"
+  id="svg4"
+  xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="m 254.20941,176.93199 c -54.54545,13.11189 -101.74825,74.12588 -66.08392,129.02098 35.66434,54.8951 225.52448,213.46153 280.06993,200.34964 C 522.74088,493.19072 484.26688,251.4391 448.60255,196.544 412.93821,141.6489 308.75487,163.8201 254.20941,176.93199"
+    fill="url(#LinearGradient1000)"
+    stroke-width="0"
+    stroke="#6f2a41"
+    transform="matrix(-0.28214745,1.6001377,-1.6001377,-0.28214745,942.66394,-169.88982)"
+    fill-opacity="1"
+    id="path1"/>
+  <defs
+    id="defs4">
+    <linearGradient
+      id="LinearGradient1000"
+      gradientTransform="rotate(0, 0.5, 0.5)">
+      <stop
+        stop-color="#d2a1c1"
+        offset="0"
+        id="stop1"/>
+      <stop
+        stop-color="#bb669d"
+        offset="1"
+        id="stop2"/>
+    </linearGradient>
+  </defs>
+</svg>

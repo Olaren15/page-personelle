@@ -1,0 +1,19 @@
+name: Déploiement
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yml
+
+  deploiement:
+    needs: build
+    uses: ./.github/workflows/deploiement-firebase.yml
+    with:
+      firebase-channel-id: live
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
+      firebase-service-account: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PAGE_WEB_E1C35 }}
