@@ -10,4 +10,5 @@ jobs:
 
   deploiement:
     if: "${{ github.event.pull_request.head.repo.full_name == github.repository }}"
+    needs: build
     uses: ./.github/workflows/deploiement-firebase.yml
