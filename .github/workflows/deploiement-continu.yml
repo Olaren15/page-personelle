@@ -1,0 +1,15 @@
+name: Déploiement
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yml
+
+  deploiement:
+    uses: ./.github/workflows/deploiement-firebase.yml
+    with:
+      firebaseChannelId: live
