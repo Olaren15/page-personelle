@@ -2,10 +2,15 @@ name: Génération du site web
 
 on:
   workflow_call:
+    inputs:
+      environment:
+        type: string
+        required: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
 
     steps:
       - name: Checkout du dépot

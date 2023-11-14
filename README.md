@@ -21,8 +21,13 @@ Le code source de ma page personnelle (qui est disponible au https://cathgilbert
    npm run dev
    ```
 
+### Variables d'environnement
+
+`ENABLE_ANALYTICS`: Définir à `true` pour activer le script de Plausible.
+
 # Technologies utilisées
 
 - Astro
 - Typescript
 - Tailwind CSS
+- Plausible Analytics
