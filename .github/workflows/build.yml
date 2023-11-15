@@ -27,6 +27,8 @@ jobs:
 
       - name: Génération du site web
         run: npm run build
+        env:
+          ENABLE_ANALYTICS: ${{ vars.ENABLE_ANALYTICS }}
 
       - name: Archivage du site généré
         uses: actions/upload-artifact@v3
