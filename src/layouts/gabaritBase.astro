@@ -34,6 +34,16 @@ const langue = obtenirLangueSelonUrl(Astro.url);
 
       appliquerTheme(obtenirPreferenceTheme());
     </script>
+    {
+      import.meta.env.ENABLE_ANALYTICS ? (
+        <script
+          is:inline
+          defer
+          data-domain="cathgilbert.com"
+          src={`https://analytics.cathgilbert.com/js/script.outbound-links.js`}
+        />
+      ) : undefined
+    }
     <title>{titre}</title>
   </head>
   <body class="bg-light-background dark:bg-dark-background text-light-foreground dark:text-dark-foreground transition">
