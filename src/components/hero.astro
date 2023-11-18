@@ -8,20 +8,29 @@ import forme3 from "../images/forme3.svg";
 
 const langue = obtenirLangueSelonUrl(Astro.url);
 const t = utiliserTraductions(langue);
+
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
 ---
 
-<div
+<header
+  id={id}
   class="flex flex-col flex-grow justify-center items-center text-center
-    absolute top-0 bottom-0 left-0 right-0 p-2
+    absolute top-0 bottom-0 left-0 right-0 -z-10 p-2
     overflow-x-clip"
 >
-  <h1 class="text-5xl font-bold tracking-tight">
-    {t("accueil.hero.salutation")}{" "}
-    <span class="text-transparent bg-clip-text bg-gradient-to-tr from-main-darker to-main"
-      >{t("accueil.hero.prenom")}&nbsp;{t("accueil.hero.nom")}{t("ponctuation.point")}</span
-    >
-  </h1>
-  <h2 class="mt-4 text-3xl opacity-90">{t("accueil.hero.poste")}</h2>
+  <hgroup>
+    <h1 class="text-5xl font-bold tracking-tight">
+      {t("accueil.hero.salutation")}{" "}
+      <span class="text-transparent bg-clip-text bg-gradient-to-tr from-main-darker to-main"
+        >{t("accueil.hero.prenom")}&nbsp;{t("accueil.hero.nom")}{t("ponctuation.point")}</span
+      >
+    </h1>
+    <p class="mt-4 text-3xl opacity-90">{t("accueil.hero.poste")}</p>
+  </hgroup>
   <Image
     aria-hidden="true"
     role="presentation"
@@ -46,4 +55,4 @@ const t = utiliserTraductions(langue);
     alt=""
     loading="eager"
   />
-</div>
+</header>
