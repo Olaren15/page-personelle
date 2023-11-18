@@ -3,6 +3,7 @@ import "@fontsource-variable/urbanist";
 
 import { obtenirLangueSelonUrl } from "../i18n/utils";
 import LienContenuPrincipal from "../components/lienContenuPrincipal.astro";
+import Navigation from "../components/navigation/navigation.astro";
 
 interface Props {
   titre: string;
@@ -50,6 +51,7 @@ const activerAnalytics = import.meta.env.ENABLE_ANALYTICS;
   </head>
   <body class="bg-light-background dark:bg-dark-background text-light-foreground dark:text-dark-foreground transition">
     <LienContenuPrincipal />
+    <Navigation />
     <slot />
   </body>
 </html>
