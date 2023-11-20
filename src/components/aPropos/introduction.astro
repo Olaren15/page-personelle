@@ -1,7 +1,7 @@
 ---
 import { obtenirLangueSelonUrl } from "../../i18n/utils";
 import { getEntry } from "astro:content";
-import { NiveauTitre } from "../../utils/titre";
+import type { NiveauTitre } from "../../utils/titre";
 
 const langueCourante = obtenirLangueSelonUrl(Astro.url);
 const contenu = await getEntry("a-propos", `${langueCourante}/introduction`);
