@@ -1,4 +1,4 @@
-/// <reference types="astro/client" />
+import { ImportMetaEnv } from "astro/client";
 
 interface ImportMetaEnv {
   readonly ENABLE_ANALYTICS: boolean;

@@ -1,6 +1,6 @@
 ---
 import { obtenirLangueSelonUrl, utiliserTraductions } from "../i18n/utils";
-import { idContenuPrincipal } from "../accessibilite";
+import { idContenuPrincipal } from "../utils/accessibilite";
 
 const langueCourante = obtenirLangueSelonUrl(Astro.url);
 const t = utiliserTraductions(langueCourante);
