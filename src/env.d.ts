@@ -2,9 +2,7 @@
 /// <reference path="../.astro/types.d.ts" />
 import type { ImportMetaEnv } from "astro/client";
 
-interface ImportMetaEnv {
-  readonly ENABLE_ANALYTICS: boolean;
-}
+interface ImportMetaEnv {}
 
 interface ImportMeta {
   readonly env: ImportMetaEnv;
