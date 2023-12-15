@@ -12,8 +12,6 @@ interface Props {
 
 const { titre, description } = Astro.props;
 const langue = obtenirLangueSelonUrl(Astro.url);
-
-const activerAnalytics = import.meta.env.ENABLE_ANALYTICS;
 ---
 
 <!doctype html>
@@ -37,16 +35,6 @@ const activerAnalytics = import.meta.env.ENABLE_ANALYTICS;
 
       appliquerTheme(obtenirPreferenceTheme());
     </script>
-    {
-      activerAnalytics && (
-        <script
-          is:inline
-          defer
-          data-domain="cathgilbert.com"
-          src="https://analytics.cathgilbert.com/js/script.outbound-links.js"
-        />
-      )
-    }
     <title>{titre}</title>
   </head>
   <body class="bg-light-background dark:bg-dark-background text-light-foreground dark:text-dark-foreground transition">
