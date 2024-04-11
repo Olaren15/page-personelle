@@ -5,7 +5,6 @@ import Hero from "../components/hero.astro";
 import GabaritBase from "../layouts/gabaritBase.astro";
 import Conteneur from "../components/conteneur.astro";
 import PiedDePage from "../components/piedDePage/piedDePage.astro";
-import EnConstruction from "../components/enConstruction.astro";
 import Introduction from "../components/aPropos/introduction.astro";
 
 const langue = obtenirLangueSelonUrl(Astro.url);
@@ -18,7 +17,6 @@ const t = utiliserTraductions(langue);
     <main class="mt-[calc(100vh)]">
       <Conteneur>
         <Introduction niveauTitre="h2" />
-        <EnConstruction />
       </Conteneur>
     </main>
     <PiedDePage />
