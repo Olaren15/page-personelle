@@ -1,29 +1,7 @@
-# Page accueil
+# site-web
 
-Le code source de ma page personnelle (qui est disponible au https://cathgilbert.com)
+Le code source de mon site web (qui est disponible au https://cathgilbert.com)
 
-## Développement local
+## License
 
-### Outils nécessaires :
-
-- Node JS
-- Npm
-
-1. Installer les dépendances
-
-   ```bash
-   npm install
-   ```
-
-2. Démarrer le serveur de développement
-
-   ```bash
-   npm run dev
-   ```
-
-# Technologies utilisées
-
-- Astro
-- Typescript
-- Tailwind CSS
-- Plausible Analytics
+The code in this repository is licensed under the MIT License
